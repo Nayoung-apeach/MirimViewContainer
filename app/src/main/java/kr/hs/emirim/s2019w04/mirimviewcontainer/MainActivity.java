@@ -28,10 +28,11 @@ public class MainActivity extends AppCompatActivity {
         public void onClick(View v) {
             switch (v.getId()){
                 case R.id.btn_prev:
-                    flipper.showPrevious();
+                    flipper.setFlipInterval(1000);
+                    flipper.startFlipping();
                     break;
                 case R.id.btn_next:
-                    flipper.showNext();
+                    flipper.stopFlipping();
                     break;
             }
         }
